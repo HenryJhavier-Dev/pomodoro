@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:Pomodoro.ViewModels" x:Class="Pomodoro.Views.HistoryPage">
+    <ContentPage.BindingContext>
+        <viewmodels:HistoryPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <ListView ItemsSource="{Binding Pomodoros}"/>
+
+</ContentPage>

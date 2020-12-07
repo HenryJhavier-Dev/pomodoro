@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:Pomodoro.ViewModels" xmlns:helpers="clr-namespace:Pomodoro.Helpers" x:Class="Pomodoro.Views.PomodoroPage">
+
+    <ContentPage.BindingContext>
+        <viewmodels:PomodoroPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <Grid>
+         
+        <Grid.Triggers>
+            <DataTrigger TargetType="Grid"
+                         Binding="{Binding IsRunning}"
+                         Value="True">
+                <Setter Property="Background" Value="IndianRed"/>
+            </DataTrigger>
+             <DataTrigger TargetType="Grid"
+                         Binding="{Binding IsInBreak}"
+                         Value="True">
+                <Setter Property="Background" Value="LightGreen"/>
+            </DataTrigger>
+        </Grid.Triggers>
+
+        <helpers:CircularProgress
+            Progress="{Binding Ellapsed.TotalSeconds}"
+            Max="{Binding Duration}"/>
+
+        <StackLayout
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center">
+            <Label 
+                   FontSize="60"
+                   TextColor="Blue"
+                   Text="{Binding Ellapsed, StringFormat='{}{0:t}'}"/>
+
+            <Button Grid.Row="1"
+                    Background="Red"
+                    Text="Iniciar/Pausar"
+                    Command="{Binding StartOrPauseCommand}">
+            </Button>
+        </StackLayout>
+
+
+    </Grid>
+</ContentPage>
