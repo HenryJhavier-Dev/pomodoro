@@ -28,10 +28,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resx\AppResources.es.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>AppResources.es.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Resx\Resources.es.Designer.cs">
@@ -39,9 +35,6 @@
     </Compile>
     <Compile Update="Resx\AppResources.Designer.cs">
       <DependentUpon>AppResources.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resx\AppResources.es.Designer.cs">
-      <DependentUpon>AppResources.es.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

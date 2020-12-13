@@ -9,7 +9,6 @@ namespace Pomodoro.Views
         public AboutPage()
         {
             InitializeComponent();
-            Console.WriteLine($"------{AppResources.prueba}");
         }
     }
 }

@@ -7,10 +7,12 @@
     <StackLayout VerticalOptions="FillAndExpand">
 
         <Image
-            Source="logo_ponodoro.png"
+            HeightRequest="100"
+            WidthRequest="100"
+            Source="logo_pomodoro.png"
 			VerticalOptions="Start"
 			HorizontalOptions="Start" />
-
+        <Label Text="{x:StaticResource app_name}"/>
         <ListView x:Name="ListViewMenu"
                     HasUnevenRows="True">
             <ListView.ItemTemplate>

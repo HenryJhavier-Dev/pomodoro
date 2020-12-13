@@ -1,4 +1,5 @@
 ﻿using Pomodoro.Models;
+using Pomodoro.Resx;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,8 +19,8 @@ namespace Pomodoro.Views
             menuItems = new List<HomeMenuItem>
             {
 
-                new HomeMenuItem {Id = MenuItemType.Pomodoro, Title="Pomodoro" },
-                new HomeMenuItem {Id = MenuItemType.History, Title="History" },
+                new HomeMenuItem {Id = MenuItemType.Pomodoro, Title= "" },
+                new HomeMenuItem {Id = MenuItemType.History, Title= ""},
                 new HomeMenuItem {Id = MenuItemType.Configuration, Title="Configuration" },
                 new HomeMenuItem {Id = MenuItemType.About, Title="About" }
             };
