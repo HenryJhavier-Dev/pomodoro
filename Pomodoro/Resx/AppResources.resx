@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    
+    <data name="app_name"><value>Pomodoro</value></data>
+    <data name="about_one"><value>This app is written in C# and native APIs using the</value></data>
+      
+    <data name="about_two"><value> It shares code with its</value></data>
+    <data name="about_three"><value>iOS and Android versions.</value></data>
+   
+    <data name="xamarin_platform"><value>Xamarin Platform</value></data>
+    <data name="learn_more"><value>Learn more</value></data>
+   
+    <data name="historical"><value>Historical</value></data>
+    <data name="configuration"><value>Configuration</value></data>
+    <data name="about"><value>About</value></data>
+    <data name="title_error_alert"><value>Warning</value></data>
+    <data name="ok"><value>ok</value></data>
+    <data name="configuration_break_duration"><value>You need to set the duration and rest time</value></data>
+
+     
+    
+    
+</root>

@@ -58,7 +58,6 @@ namespace Pomodoro.ViewModels
 
         private void LoadConfiguredValues()
         {
-            // todo la primera vez explota sino configuras primero la duración
 
             Duration         = pomodoroDuration * 60;
             pomodoroDuration = (int)Application.Current.Properties[Literals.PomodoroDuration];
