@@ -5,6 +5,12 @@
              Title="Menu">
              
     <StackLayout VerticalOptions="FillAndExpand">
+
+        <Image
+            Source="logo_ponodoro.png"
+			VerticalOptions="Start"
+			HorizontalOptions="Start" />
+
         <ListView x:Name="ListViewMenu"
                     HasUnevenRows="True">
             <ListView.ItemTemplate>

@@ -1,8 +1,6 @@
-﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using Pomodoro.Services;
+﻿using Pomodoro.Services;
 using Pomodoro.Views;
+using Xamarin.Forms;
 
 namespace Pomodoro
 {
@@ -12,6 +10,8 @@ namespace Pomodoro
         public App()
         {
             InitializeComponent();
+
+            Resources["DefaultStringResources"] = new Resx.AppResources();
 
             DependencyService.Register<MockDataStore>();
             MainPage = new MainPage();

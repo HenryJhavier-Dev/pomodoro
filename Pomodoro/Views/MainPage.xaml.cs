@@ -17,7 +17,7 @@ namespace Pomodoro.Views
 
             MasterBehavior = MasterBehavior.Popover;
 
-            MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
+            MenuPages.Add((int)MenuItemType.About, (NavigationPage)Detail);
         }
 
         public async Task NavigateFromMenu(int id)
@@ -35,9 +35,6 @@ namespace Pomodoro.Views
                         break;
                     case (int)MenuItemType.Configuration:
                         MenuPages.Add(id, new NavigationPage(new ConfigurationPage()));
-                        break;
-                    case (int)MenuItemType.Browse:
-                        MenuPages.Add(id, new NavigationPage(new ItemsPage()));
                         break;
                     case (int)MenuItemType.About:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));

@@ -6,7 +6,6 @@ namespace Pomodoro.Models
 {
     public enum MenuItemType
     {
-        Browse,
         Pomodoro,
         History,
         Configuration,          

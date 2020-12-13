@@ -1,5 +1,4 @@
-﻿using System;
-namespace Pomodoro.Helpers
+﻿namespace Pomodoro.Helpers
 {
     internal class Literals
     {

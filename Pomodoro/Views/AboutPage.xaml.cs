@@ -1,7 +1,6 @@
 ﻿using System;
-using System.ComponentModel;
+using Pomodoro.Resx;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace Pomodoro.Views
 {
@@ -10,6 +9,7 @@ namespace Pomodoro.Views
         public AboutPage()
         {
             InitializeComponent();
+            Console.WriteLine($"------{AppResources.prueba}");
         }
     }
 }

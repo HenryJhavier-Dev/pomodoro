@@ -21,7 +21,6 @@ namespace Pomodoro.Views
                 new HomeMenuItem {Id = MenuItemType.Pomodoro, Title="Pomodoro" },
                 new HomeMenuItem {Id = MenuItemType.History, Title="History" },
                 new HomeMenuItem {Id = MenuItemType.Configuration, Title="Configuration" },
-                new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
                 new HomeMenuItem {Id = MenuItemType.About, Title="About" }
             };
 
