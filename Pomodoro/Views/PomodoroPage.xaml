@@ -1,5 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:Pomodoro.ViewModels" xmlns:helpers="clr-namespace:Pomodoro.Helpers" x:Class="Pomodoro.Views.PomodoroPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:Pomodoro.ViewModels"
+             xmlns:helpers="clr-namespace:Pomodoro.Helpers"
+             x:Class="Pomodoro.Views.PomodoroPage"
+             xmlns:resources="clr-namespace:Pomodoro.Resx"
+             >
 
     <ContentPage.BindingContext>
         <viewmodels:PomodoroPageViewModel/>
@@ -16,7 +22,7 @@
              <DataTrigger TargetType="Grid"
                          Binding="{Binding IsInBreak}"
                          Value="True">
-                <Setter Property="Background" Value="LightGreen"/>
+                <Setter Property="Background" Value="#FF4081"/>
             </DataTrigger>
         </Grid.Triggers>
 
@@ -29,12 +35,12 @@
                    HorizontalOptions="Center">
             <Label 
                    FontSize="60"
-                   TextColor="Blue"
+                   TextColor="Black"
                    Text="{Binding Ellapsed, StringFormat='{}{0:t}'}"/>
 
             <Button Grid.Row="1"
                     Background="Red"
-                    Text="Iniciar/Pausar"
+                    Text="{x:Static resources:AppResources.start_pause}"
                     Command="{Binding StartOrPauseCommand}">
             </Button>
         </StackLayout>

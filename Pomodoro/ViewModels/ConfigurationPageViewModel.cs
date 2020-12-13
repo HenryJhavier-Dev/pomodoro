@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Pomodoro.Helpers;
+using Pomodoro.Resx;
 using Xamarin.Forms;
 
 namespace Pomodoro.ViewModels
@@ -76,7 +77,7 @@ namespace Pomodoro.ViewModels
         {
             BreakDurations = new ObservableCollection<int>()
             {
-                1,5,10,25
+                1,2,3
             };
         }
 
@@ -84,7 +85,7 @@ namespace Pomodoro.ViewModels
         {
             PomodoroDurations = new ObservableCollection<int>()
             {
-                1,5,10,25
+                1,2,3
             };
         }
 
@@ -95,6 +96,11 @@ namespace Pomodoro.ViewModels
             Application.Current.Properties[Literals.BreakDuration] = SelectedBreakDuration;
 
             await Application.Current.SavePropertiesAsync();
+
+            await Application.Current.MainPage.DisplayAlert(
+                    AppResources.title_succes,
+                     AppResources.title_go_tab_pomodoro,
+                     AppResources.ok);
         }
     }
 }

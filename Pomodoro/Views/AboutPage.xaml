@@ -39,6 +39,9 @@
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
+
+                <Label Text="{x:Static resources:AppResources.about_project}"></Label>
+                <Label Text="{x:Static resources:AppResources.about_architecture}"></Label>
                 <Label>
                     <Label.FormattedText>
                         <FormattedString>

@@ -25,11 +25,30 @@
     <data name="historical"><value>Historical</value></data>
     <data name="configuration"><value>Configuration</value></data>
     <data name="about"><value>About</value></data>
+    <data name="start_pause"><value> Start / Pause</value></data>
+   
+    <!--Message error -->
     <data name="title_error_alert"><value>Warning</value></data>
-    <data name="ok"><value>ok</value></data>
-    <data name="configuration_break_duration"><value>You need to set the duration and rest time</value></data>
+    <data name="configuration_break_duration"><value>You need to set the duration and rest time. Go to Configuration Tab</value></data>
+    <data name="message_error_clear_lista"><value>Your list is already empty</value></data>
 
-     
+    <!--Message success -->
+    <data name="title_succes"><value>Succesful transaction</value></data>
+    <data name="title_go_tab_pomodoro"><value>Go to the pomodoro tab</value></data>
+    <data name="ok"><value>ok</value></data>
+
+    <!--About project -->
+
+    <data name="about_project"><value>End of course application xamarin forms</value></data>
+    <data name="about_architecture"><value>MVVM architecture pattern</value></data>
+
     
+    <data name="save"><value>Save</value></data>
+    <data name="pomodoro_duration"><value>Pomodoro Duration (Min)</value></data>
+    <data name="pomodoro_break"><value>Pomodoro Break (Min)</value></data>
     
+    <data name="date"><value>Date</value></data>
+    <data name="clear_list"><value>Clear List</value></data>
+
+
 </root>

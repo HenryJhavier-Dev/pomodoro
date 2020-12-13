@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Windows.Input;
 using Newtonsoft.Json;
 using Pomodoro.Helpers;
+using Pomodoro.Models;
 using Xamarin.Forms;
 
 namespace Pomodoro.ViewModels
@@ -109,7 +109,7 @@ namespace Pomodoro.ViewModels
 
         private async Task SavePomodoroAsync()
         {
-            List<DateTime> history;
+            List<ListPomodoro> history;
 
             // Si existe añade sino crea la lista de promodoro
 
@@ -118,16 +118,21 @@ namespace Pomodoro.ViewModels
 
                 var json_history = Application.Current.Properties[Literals.History].ToString();
 
-                history = JsonConvert.DeserializeObject<List<DateTime>>(json_history);
+                history = JsonConvert.DeserializeObject<List<ListPomodoro>>(json_history);
 
             }   
             else {
 
-                history = new List<DateTime>();
+                history = new List<ListPomodoro>();
 
             }
 
-            history.Add(DateTime.Now);
+            var add_history = new ListPomodoro {
+                date = DateTime.Now,
+                item_count = history.Count
+            };
+
+            history.Add(add_history);
 
             var serializeObject = JsonConvert.SerializeObject(history);
 

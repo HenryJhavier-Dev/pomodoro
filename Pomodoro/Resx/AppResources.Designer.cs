@@ -101,9 +101,39 @@ namespace Pomodoro.Resx {
             }
         }
         
+        internal static string start_pause {
+            get {
+                return ResourceManager.GetString("start_pause", resourceCulture);
+            }
+        }
+        
         internal static string title_error_alert {
             get {
                 return ResourceManager.GetString("title_error_alert", resourceCulture);
+            }
+        }
+        
+        internal static string configuration_break_duration {
+            get {
+                return ResourceManager.GetString("configuration_break_duration", resourceCulture);
+            }
+        }
+        
+        internal static string message_error_clear_lista {
+            get {
+                return ResourceManager.GetString("message_error_clear_lista", resourceCulture);
+            }
+        }
+        
+        internal static string title_succes {
+            get {
+                return ResourceManager.GetString("title_succes", resourceCulture);
+            }
+        }
+        
+        internal static string title_go_tab_pomodoro {
+            get {
+                return ResourceManager.GetString("title_go_tab_pomodoro", resourceCulture);
             }
         }
         
@@ -113,9 +143,45 @@ namespace Pomodoro.Resx {
             }
         }
         
-        internal static string configuration_break_duration {
+        internal static string about_project {
             get {
-                return ResourceManager.GetString("configuration_break_duration", resourceCulture);
+                return ResourceManager.GetString("about_project", resourceCulture);
+            }
+        }
+        
+        internal static string about_architecture {
+            get {
+                return ResourceManager.GetString("about_architecture", resourceCulture);
+            }
+        }
+        
+        internal static string save {
+            get {
+                return ResourceManager.GetString("save", resourceCulture);
+            }
+        }
+        
+        internal static string pomodoro_duration {
+            get {
+                return ResourceManager.GetString("pomodoro_duration", resourceCulture);
+            }
+        }
+        
+        internal static string pomodoro_break {
+            get {
+                return ResourceManager.GetString("pomodoro_break", resourceCulture);
+            }
+        }
+        
+        internal static string date {
+            get {
+                return ResourceManager.GetString("date", resourceCulture);
+            }
+        }
+        
+        internal static string clear_list {
+            get {
+                return ResourceManager.GetString("clear_list", resourceCulture);
             }
         }
     }

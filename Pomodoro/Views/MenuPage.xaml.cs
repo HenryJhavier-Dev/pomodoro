@@ -1,12 +1,9 @@
-﻿using Pomodoro.Helpers;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using Pomodoro.Helpers;
 using Pomodoro.Models;
 using Pomodoro.Resx;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Threading.Tasks;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace Pomodoro.Views
 {
@@ -50,6 +47,8 @@ namespace Pomodoro.Views
         //la pantalla de configuracion
         private async Task VerificateCondition(HomeMenuItem menuItem)
         {
+            var id = (int)menuItem.Id;
+
             //Si seleccionas la pestaña pomodoro verifica que ya este configurado
             if (menuItem.Title.Equals(AppResources.app_name))
             {
@@ -61,11 +60,13 @@ namespace Pomodoro.Views
                         AppResources.ok);
 
                 }
+                else {
+                    await RootPage.NavigateFromMenu(id);
+                }
 
             }
             else {
 
-                var id = (int)menuItem.Id;
                 await RootPage.NavigateFromMenu(id);
             }
         }

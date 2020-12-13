@@ -1,21 +1,24 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:Pomodoro.ViewModels" x:Class="Pomodoro.Views.ConfigurationPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:Pomodoro.ViewModels"
+             xmlns:resources="clr-namespace:Pomodoro.Resx"
+             x:Class="Pomodoro.Views.ConfigurationPage">
     <ContentPage.BindingContext>
         <viewmodels:ConfigurationPageViewModel/>
     </ContentPage.BindingContext>
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Guardar" Command="{Binding SaveCommand}"/>
+        <ToolbarItem Text="{x:Static resources:AppResources.save}" Command="{Binding SaveCommand}"/>
     </ContentPage.ToolbarItems>
 
     <StackLayout Margin="12">
-        <Label Text="Duración del pomodoro"/>
+        <Label Text="{x:Static resources:AppResources.pomodoro_duration}"/>
         <Picker ItemsSource="{Binding PomodoroDurations}"
                 SelectedItem="{Binding SelectedPomodoroDuration
                 , Mode=TwoWay}"/>
 
-        <Label Text="Duración de la pausa"/>
+        <Label Text="{x:Static resources:AppResources.pomodoro_break}"/>
         <Picker ItemsSource="{Binding BreakDurations}"
                 SelectedItem="{Binding SelectedBreakDuration
                 , Mode=TwoWay}"/>

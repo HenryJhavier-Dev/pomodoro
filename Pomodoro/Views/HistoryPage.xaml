@@ -1,9 +1,37 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:Pomodoro.ViewModels" x:Class="Pomodoro.Views.HistoryPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:Pomodoro.ViewModels"
+             xmlns:resources="clr-namespace:Pomodoro.Resx"
+             x:Class="Pomodoro.Views.HistoryPage">
     <ContentPage.BindingContext>
         <viewmodels:HistoryPageViewModel/>
     </ContentPage.BindingContext>
 
-    <ListView ItemsSource="{Binding Pomodoros}"/>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="{x:Static resources:AppResources.clear_list}" Command="{Binding ClearListCommand}"/>
+    </ContentPage.ToolbarItems>
+
+
+    <ListView ItemsSource="{Binding Pomodoros}" HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate >
+                <ViewCell >
+                    <StackLayout Margin="10" >
+                        <Label Text="{x:Static resources:AppResources.date}"
+                               FontSize="20"/>
+                        <Label Text="{Binding date, StringFormat='{0:h:mm tt}'}"
+                               TextColor="Black"/>
+                        <Label Text="{Binding date}"
+                            TextColor="Black"/>
+                        <Label Text="{Binding item_count, StringFormat ='Position: {0}'}"
+                               TextColor="Black"/>
+                        <BoxView BackgroundColor="Red" HeightRequest="1"/>
+                    </StackLayout>
+                </ViewCell>
+
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 
 </ContentPage>
